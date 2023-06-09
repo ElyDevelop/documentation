@@ -4,13 +4,13 @@
 Pagos
 ========
 
-En Odoo, los pagos pueden vincularse automáticamente a una factura o ser registros independientes
+En Odoo, los pagos pueden vincularse automáticamente a una factura o recibo o ser registros independientes
 para su uso en una fecha posterior.
 
-Si un pago está **vinculado a una factura**, se reduce el importe adeudado de la factura. Puedes
-tienen varios pagos relacionados con la misma factura.
+Si un pago está **vinculado a una factura o recibo**, se reduce el importe adeudado de la factura. Puedes
+tener varios pagos relacionados con la misma factura.
 
-Si un pago **no está vinculado a una factura**, el cliente tiene un crédito pendiente con
+Si un pago **no está vinculado a una factura o recibo**, el cliente tiene un crédito pendiente con
 su empresa, o su empresa tiene un débito pendiente con un proveedor. Puedes usar aquellos sobresalientes
 importes para reducir facturas/facturas impagadas.
 
@@ -36,7 +36,8 @@ Acceda a información adicional, como la revista relacionada, haciendo clic en :
    :alt: See detailed information of a payment
 
 .. note::
-   - La factura del cliente o la factura del proveedor deben estar en el estado :guilabel:`Publicada` para registrar el pago.
+   - La factura del cliente o la factura del proveedor deben estar en el estado :guilabel:`Publicada` para 
+     registrar el pago.
    - Al hacer clic en :guilabel:`Registrar pago`, Puede seleccionar la cantidad a pagar y hacer un
      pago parcial o total.
    - Si su cuenta bancaria principal está configurada como :ref:`outstanding account
@@ -53,7 +54,7 @@ Acceda a información adicional, como la revista relacionada, haciendo clic en :
    - :doc:`bank/reconciliation`
 
 Registrar pagos no vinculados a una factura o recibo
-===================================================
+====================================================
 
 Cuando se registra un nuevo pago a través del menú :menuselection:`Customers / Vendors --> Payments`,
 no está directamente vinculado a una factura. En su lugar, la cuenta por cobrar o la cuenta por pagar
@@ -62,22 +63,28 @@ se emparejan con la cuenta pendiente hasta que se emparejan manualmente con su f
 Coincidir facturas y recibos con pagos
 -----------------------------------------
 
-Un banner azul aparece cuando se valida una nueva factura o recibo y hay un pago pendiente para este cliente o proveedor específico. Puede coincidirse fácilmente desde la factura o el recibo haciendo clic en :guilabel:`Añadir` debajo de :guilabel:`Créditos por cobrar` o :guilabel:`Débitos por pagar`.
+Un banner azul aparece cuando se valida una nueva factura o recibo y hay un pago pendiente para este 
+cliente o proveedor específico. Puede coincidirse fácilmente desde la factura o el recibo haciendo 
+clic en :guilabel:`Añadir` debajo de :guilabel:`Créditos por cobrar` o :guilabel:`Débitos por pagar`.
 
 .. image:: payments/add-option.png
    :alt: Shows the ADD option to reconcile an invoice or a bill with a payment
 
-La factura o recibo ahora está marcado como :guilabel:`En pago` hasta que se concilie con el estado de cuenta bancario.
+La factura o recibo ahora está marcado como :guilabel:`En pago` hasta que se concilie con el estado 
+de cuenta bancaria.
 
 .. seealso::
    - :doc:`bank/reconciliation`
 
 Pago por lotes
--------------
+--------------
 
-Los pagos por lotes le permiten agrupar diferentes pagos para facilitar :doc:`reconciliation
-<bank/reconciliation>`. También son útiles cuando deposita cheques en el banco o para Pagos SEPA. Para hacerlo, vaya a :menuselection:`Contabilidad --> Clientes --> Pagos por lotes` o
-:menuselection:`Contabilidad --> Proveedores --> Pagos por lotes`. En la vista de lista de pagos, puede seleccionar varios pagos y agruparlos en un lote haciendo clic en :menuselection:`Acción --> Crear pago por lotes`.
+Los pagos por lotes le permiten agrupar diferentes pagos para facilitar la :doc:`conciliación
+<bank/reconciliation>`. También son útiles cuando deposita cheques en el banco o para Pagos SEPA. 
+Para hacerlo, vaya a :menuselection:`Contabilidad --> Clientes --> Pagos por lotes` o
+:menuselection:`Contabilidad --> Proveedores --> Pagos por lotes`. En la vista de lista de pagos, 
+puede seleccionar varios pagos y agruparlos en un lote haciendo clic 
+en :menuselection:`Acción --> Crear pago por lotes`.
 
 .. seealso::
   - :doc:`payments/batch`
@@ -86,33 +93,38 @@ Los pagos por lotes le permiten agrupar diferentes pagos para facilitar :doc:`re
 .. _payments-matching:
 
 Coincidencias de pagos
------------------
+----------------------
 
-La herramienta :guilabel:`Coincidencias de pagos` abre todas las facturas de clientes o recibos de proveedores no conciliados y le brinda la oportunidad de procesarlos uno por uno, haciendo la coincidencia de todos sus pagos y facturas a la vez. Puede acceder a esta herramienta desde :menuselection:`Dashboard Contabilidad -->
-Facturas Clientes / Facturas Proveedores`, y hacer click en :guilabel:`⋮` y selecciona :guilabel:`Coincidencia de pagos`, o yendo a :menuselection:`Contabilidad --> Conciliación`.
+La herramienta :guilabel:`Coincidencias de pagos` abre todas las facturas de clientes o recibos 
+de proveedores no conciliados y le brinda la oportunidad de procesarlos uno por uno, haciendo 
+la coincidencia de todos sus pagos y facturas a la vez. Puede acceder a esta herramienta desde 
+:menuselection:`Dashboard Contabilidad -->Facturas Clientes / Facturas Proveedores`, y hacer click 
+en :guilabel:`⋮` y selecciona :guilabel:`Coincidencia de pagos`, o yendo 
+a :menuselection:`Contabilidad --> Conciliación`.
 
 .. note::
-   Durante la :doc:`conciliación <bank/reconciliation>`, if the sum of the debits
-   and credits does not match, there is a remaining balance. This either needs to be reconciled at a
-   later date or needs to be written off directly.
+   Durante la :doc:`conciliación <bank/reconciliation>`, si la suma de los débitos y créditos no 
+   coincide, queda un saldo pendiente. Este saldo pendiente debe conciliarse en una fecha posterior 
+   o, en su defecto, debe amortizarse directamente.
 
-Batch payments matching
------------------------
+Coincidencias de pagos por lotes
+--------------------------------
 
-To reconcile several outstanding payments or invoices at once, for a specific customer or vendor,
-the batch reconciliation feature can be used. Go to :menuselection:`Accounting --> Reporting -->
-Aged Receivable / Aged Payable`. You now see all transactions that have not been reconciled yet, and
-when you select a customer or vendor, the :guilabel:`Reconcile` option is displayed.
+Para conciliar varios pagos o facturas pendientes de una vez, para un cliente o proveedor específico, 
+se puede utilizar la función de conciliación por lotes. Vaya a :menuselection:`Contabilidad --> Informes -->
+Cuentas por cobrar vencidas / Cuentas por pagar vencidas`. Ahora puede ver todas las transacciones 
+que aún no han sido conciliadas, y cuando selecciona un cliente o proveedor, se muestra la 
+opción :guilabel:`Conciliar`.
 
 .. image:: payments/reconcile-option.png
    :alt: See the reconcile option
 
-Reconciling payments with bank statements
-=========================================
+Conciliación de pagos con extractos bancarios
+=============================================
 
-Once a payment has been registered, the status of the invoice or bill is :guilabel:`In payment`. The
-next step is to reconcile it with the related bank statement line to have the transaction finalized
-and the invoice or bill marked as :guilabel:`Paid`.
+Una vez que se ha registrado un pago, el estado de la factura o recibo es :guilabel:`En pago`. El siguiente 
+paso es conciliarlo con la línea correspondiente del estado de cuenta bancario para finalizar la transacción 
+y marcar la factura o recibo como :guilabel:`Pagado`
 
 .. seealso::
    - :doc:`bank/reconciliation`
