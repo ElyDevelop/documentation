@@ -26,11 +26,11 @@ Registrar el pago de una factura o recibo
 Al hacer clic en :guilabel:`Registrar pago` en una factura de cliente o factura de proveedor, se genera una
 nueva entrada en el diario y cambia el importe adeudado según el importe del pago. La contraparte
 se refleja en una cuenta de recibos o pagos pendientes. En este punto, la factura del cliente o
-aa factura del proveedor está marcada como :guilabel:`En pago`. Luego, cuando se concilie la cuenta pendiente
+la factura del proveedor está marcada como :guilabel:`En pago`. Luego, cuando se concilie la cuenta pendiente
 con una línea de extracto bancario, la factura o factura de proveedor cambia al estado :guilabel:`Pagado`.
 
-El icono de información cerca de la línea de pago muestra más información sobre el pago. Puedes
-Acceda a información adicional, como la revista relacionada, haciendo clic en :guilabel:`Ver`.
+El icono de información junto a la línea de pago muestra más información sobre el pago. Puede 
+acceder a información adicional, como el diario relacionado, haciendo clic en :guilabel:`Ver`.
 
 .. image:: payments/information-icon.png
    :alt: See detailed information of a payment
@@ -40,13 +40,13 @@ Acceda a información adicional, como la revista relacionada, haciendo clic en :
      registrar el pago.
    - Al hacer clic en :guilabel:`Registrar pago`, Puede seleccionar la cantidad a pagar y hacer un
      pago parcial o total.
-   - Si su cuenta bancaria principal está configurada como :ref:`outstanding account
+   - Si su cuenta bancaria principal está configurada como :ref:`Cuenta pendiente
      <bank/outstanding-accounts>`, y el pago se realiza en Odoo (no relacionado con un
      extracto bancario), las facturas se registran directamente en el estado :guilabel:`Pagado`.
    - Si ha desconciliado un pago, seguirá apareciendo en sus libros, pero ya no estará vinculado a la
      factura.
-   - Si (des)concilia un pago en una moneda diferente, una entrada de diario se realiza automáticamente
-     creado para contabilizar el importe de las ganancias/pérdidas (reversión) por cambio de moneda.
+   - Si (des)concilia un pago en una moneda diferente, automáticamente se crea una entrada contable para 
+     registrar las ganancias o pérdidas de cambio de divisas (revisión).
    - Si (des)concilia un pago y una factura que tiene impuestos en efectivo, una entrada de diario es
      creado automáticamente para contabilizar el importe del impuesto sobre la base de efectivo (reversión).
 
@@ -56,7 +56,7 @@ Acceda a información adicional, como la revista relacionada, haciendo clic en :
 Registrar pagos no vinculados a una factura o recibo
 ====================================================
 
-Cuando se registra un nuevo pago a través del menú :menuselection:`Customers / Vendors --> Payments`,
+Cuando se registra un nuevo pago a través del menú :menuselection:`Clientes / Proveedores --> Pagos`,
 no está directamente vinculado a una factura. En su lugar, la cuenta por cobrar o la cuenta por pagar
 se emparejan con la cuenta pendiente hasta que se emparejan manualmente con su factura relacionada.
 
