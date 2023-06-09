@@ -4,15 +4,15 @@
 Pagos
 ========
 
-In Odoo, payments can either be linked automatically to an invoice or bill or be stand-alone records
-for use at a later date.
+En Odoo, los pagos pueden vincularse automáticamente a una factura o ser registros independientes
+para su uso en una fecha posterior.
 
-If a payment is **linked to an invoice or bill**, it reduces the amount due of the invoice. You can
-have multiple payments related to the same invoice.
+Si un pago está **vinculado a una factura**, se reduce el importe adeudado de la factura. Puedes
+tienen varios pagos relacionados con la misma factura.
 
-If a payment is **not linked to an invoice or bill**, the customer has an outstanding credit with
-your company, or your company has an outstanding debit with a vendor. You can use those outstanding
-amounts to reduce unpaid invoices/bills.
+Si un pago **no está vinculado a una factura**, el cliente tiene un crédito pendiente con
+su empresa, o su empresa tiene un débito pendiente con un proveedor. Puedes usar aquellos sobresalientes
+importes para reducir facturas/facturas impagadas.
 
 .. seealso::
    - :doc:`Internal transfers <payments/internal_transfers>`
@@ -20,72 +20,64 @@ amounts to reduce unpaid invoices/bills.
    - `Odoo Tutorials: Bank Configuration
      <https://www.odoo.com/slides/slide/bank-configuration-1880>`_
 
-Registering payment from an invoice or bill
+Registrar el pago de una factura o recibo
 ===========================================
 
-When clicking on :guilabel:`Register payment` in a customer invoice or vendor bill, it generates a
-new journal entry and changes the amount due according to the amount of the payment. The counterpart
-is reflected in an outstanding receipts or payments account. At this point, the customer invoice or
-vendor bill is marked as :guilabel:`In payment`. Then, when the outstanding account is reconciled
-with a bank statement line, the invoice or vendor bill changes to the :guilabel:`Paid` status.
+Al hacer clic en :guilabel:`Registrar pago` en una factura de cliente o factura de proveedor, se genera una
+nueva entrada en el diario y cambia el importe adeudado según el importe del pago. La contraparte
+se refleja en una cuenta de recibos o pagos pendientes. En este punto, la factura del cliente o
+aa factura del proveedor está marcada como :guilabel:`En pago`. Luego, cuando se concilie la cuenta pendiente
+con una línea de extracto bancario, la factura o factura de proveedor cambia al estado :guilabel:`Pagado`.
 
-The information icon near the payment line displays more information about the payment. You can
-access additional information, such as the related journal, by clicking on :guilabel:`View`.
+El icono de información cerca de la línea de pago muestra más información sobre el pago. Puedes
+Acceda a información adicional, como la revista relacionada, haciendo clic en :guilabel:`Ver`.
 
 .. image:: payments/information-icon.png
    :alt: See detailed information of a payment
 
 .. note::
-   - The customer invoice or vendor bill should be in the status :guilabel:`Posted` to register the
-     payment.
-   - When clicking on :guilabel:`Register payment`, you can select the amount to pay and make a
-     partial or full payment.
-   - If your main bank account is set as :ref:`outstanding account
-     <bank/outstanding-accounts>`, and the payment is made in Odoo (not related to a
-     bank statement), invoices and bills are directly registered in the status :guilabel:`Paid`.
-   - If you unreconciled a payment, it still appears in your books but is no longer linked to the
-     invoice.
-   - If you (un)reconcile a payment in a different currency, a journal entry is automatically
-     created to post the currency exchange gains/losses (reversal) amount.
-   - If you (un)reconcile a payment and an invoice having cash basis taxes, a journal entry is
-     automatically created to post the cash basis tax (reversal) amount.
+   - La factura del cliente o la factura del proveedor deben estar en el estado :guilabel:`Publicada` para registrar el pago.
+   - Al hacer clic en :guilabel:`Registrar pago`, Puede seleccionar la cantidad a pagar y hacer un
+     pago parcial o total.
+   - Si su cuenta bancaria principal está configurada como :ref:`outstanding account
+     <bank/outstanding-accounts>`, y el pago se realiza en Odoo (no relacionado con un
+     extracto bancario), las facturas se registran directamente en el estado :guilabel:`Pagado`.
+   - Si ha desconciliado un pago, seguirá apareciendo en sus libros, pero ya no estará vinculado a la
+     factura.
+   - Si (des)concilia un pago en una moneda diferente, una entrada de diario se realiza automáticamente
+     creado para contabilizar el importe de las ganancias/pérdidas (reversión) por cambio de moneda.
+   - Si (des)concilia un pago y una factura que tiene impuestos en efectivo, una entrada de diario es
+     creado automáticamente para contabilizar el importe del impuesto sobre la base de efectivo (reversión).
 
 .. seealso::
    - :doc:`bank/reconciliation`
 
-Registering payments not tied to an invoice or bill
+Registrar pagos no vinculados a una factura o recibo
 ===================================================
 
-When a new payment is registered via the menu :menuselection:`Customers / Vendors --> Payments`, it
-is not directly linked to an invoice or bill. Instead, the account receivable or the account payable
-are matched with the outstanding account until they are manually matched with their related invoice
-or bill.
+Cuando se registra un nuevo pago a través del menú :menuselection:`Customers / Vendors --> Payments`,
+no está directamente vinculado a una factura. En su lugar, la cuenta por cobrar o la cuenta por pagar
+se emparejan con la cuenta pendiente hasta que se emparejan manualmente con su factura relacionada.
 
-Matching invoices and bills with payments
+Coincidir facturas y recibos con pagos
 -----------------------------------------
 
-A blue banner appears when you validate a new invoice or bill and there is an outstanding payment
-for this specific customer or vendor. It can easily be matched from the invoice or the bill by
-clicking on :guilabel:`ADD` under :guilabel:`Outstanding Credits` or :guilabel:`Outstanding Debits`.
+Un banner azul aparece cuando se valida una nueva factura o recibo y hay un pago pendiente para este cliente o proveedor específico. Puede coincidirse fácilmente desde la factura o el recibo haciendo clic en :guilabel:`Añadir` debajo de :guilabel:`Créditos por cobrar` o :guilabel:`Débitos por pagar`.
 
 .. image:: payments/add-option.png
    :alt: Shows the ADD option to reconcile an invoice or a bill with a payment
 
-The invoice or bill is now marked as :guilabel:`In payment` until it is reconciled with the bank
-statement.
+La factura o recibo ahora está marcado como :guilabel:`En pago` hasta que se concilie con el estado de cuenta bancario.
 
 .. seealso::
    - :doc:`bank/reconciliation`
 
-Batch payment
+Pago por lotes
 -------------
 
-Batch payments allow you to group different payments to ease :doc:`reconciliation
-<bank/reconciliation>`. They are also useful when you deposit checks to the bank or
-for SEPA Payments. To do so, go to :menuselection:`Accounting --> Customers --> Batch Payments` or
-:menuselection:`Accounting --> Vendors --> Batch Payments`. In the list view of payments, you can
-select several payments and group them in a batch by clicking on :menuselection:`Action --> Create
-Batch Payment`.
+Los pagos por lotes le permiten agrupar diferentes pagos para facilitar :doc:`reconciliation
+<bank/reconciliation>`. También son útiles cuando deposita cheques en el banco o para Pagos SEPA. Para hacerlo, vaya a :menuselection:`Contabilidad --> Clientes --> Pagos por lotes` o
+:menuselection:`Contabilidad --> Proveedores --> Pagos por lotes`. En la vista de lista de pagos, puede seleccionar varios pagos y agruparlos en un lote haciendo clic en :menuselection:`Acción --> Crear pago por lotes`.
 
 .. seealso::
   - :doc:`payments/batch`
@@ -93,17 +85,14 @@ Batch Payment`.
 
 .. _payments-matching:
 
-Payments matching
+Coincidencias de pagos
 -----------------
 
-The :guilabel:`Payments matching` tool opens all unreconciled customer invoices or vendor bills and
-gives you the opportunity to process them all one by one, doing the matching of all their payments
-and invoices at once. You can reach this tool from the :menuselection:`Accounting Dashboard -->
-Customer Invoices / Vendor Bills`, and click on :guilabel:`⋮` and select :guilabel:`Payments
-Matching`, or by going to :menuselection:`Accounting --> Reconciliation`.
+La herramienta :guilabel:`Coincidencias de pagos` abre todas las facturas de clientes o recibos de proveedores no conciliados y le brinda la oportunidad de procesarlos uno por uno, haciendo la coincidencia de todos sus pagos y facturas a la vez. Puede acceder a esta herramienta desde :menuselection:`Dashboard Contabilidad -->
+Facturas Clientes / Facturas Proveedores`, y hacer click en :guilabel:`⋮` y selecciona :guilabel:`Coincidencia de pagos`, o yendo a :menuselection:`Contabilidad --> Conciliación`.
 
 .. note::
-   During the :doc:`reconciliation <bank/reconciliation>`, if the sum of the debits
+   Durante la :doc:`conciliación <bank/reconciliation>`, if the sum of the debits
    and credits does not match, there is a remaining balance. This either needs to be reconciled at a
    later date or needs to be written off directly.
 
