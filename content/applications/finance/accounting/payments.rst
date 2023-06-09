@@ -1,18 +1,18 @@
 :show-content:
 
 ========
-Payments
+Pagos
 ========
 
-In Odoo, payments can either be linked automatically to an invoice or bill or be stand-alone records
-for use at a later date.
+En Odoo, los pagos pueden vincularse automáticamente a una factura o factura o ser registros independientes
+para su uso en una fecha posterior.
 
-If a payment is **linked to an invoice or bill**, it reduces the amount due of the invoice. You can
-have multiple payments related to the same invoice.
+Si un pago está **vinculado a una factura**, se reduce el importe adeudado de la factura. Puedes
+tienen varios pagos relacionados con la misma factura.
 
-If a payment is **not linked to an invoice or bill**, the customer has an outstanding credit with
-your company, or your company has an outstanding debit with a vendor. You can use those outstanding
-amounts to reduce unpaid invoices/bills.
+Si un pago **no está vinculado a una factura**, el cliente tiene un crédito pendiente con
+su empresa, o su empresa tiene un débito pendiente con un proveedor. Puedes usar aquellos sobresalientes
+importes para reducir facturas/facturas impagadas.
 
 .. seealso::
    - :doc:`Internal transfers <payments/internal_transfers>`
@@ -20,26 +20,24 @@ amounts to reduce unpaid invoices/bills.
    - `Odoo Tutorials: Bank Configuration
      <https://www.odoo.com/slides/slide/bank-configuration-1880>`_
 
-Registering payment from an invoice or bill
+Registro del pago de una factura
 ===========================================
 
-When clicking on :guilabel:`Register payment` in a customer invoice or vendor bill, it generates a
-new journal entry and changes the amount due according to the amount of the payment. The counterpart
-is reflected in an outstanding receipts or payments account. At this point, the customer invoice or
-vendor bill is marked as :guilabel:`In payment`. Then, when the outstanding account is reconciled
-with a bank statement line, the invoice or vendor bill changes to the :guilabel:`Paid` status.
+Al hacer clic en :guilabel:`Registrar pago` En una factura de cliente o factura de proveedor, genera un
+nueva entrada en el diario y cambia el importe adeudado según el importe del pago. La contraparte
+se refleja en una cuenta de recibos o pagos pendientes. En este punto, la factura del cliente o
+la factura del proveedor está marcada como :guilabel:`En pago`. Luego, cuando se concilie la cuenta pendiente
+con una línea de extracto bancario, la factura del proveedor cambia a estado:guilabel:`Pagada`.
 
-The information icon near the payment line displays more information about the payment. You can
-access additional information, such as the related journal, by clicking on :guilabel:`View`.
+El icono de información cerca de la línea de pago muestra más información sobre el pago. Puedes
+acceder a información adicional, como el diario relacionado, haciendo clic en :guilabel:`Ver`.
 
 .. image:: payments/information-icon.png
    :alt: See detailed information of a payment
 
 .. note::
-   - The customer invoice or vendor bill should be in the status :guilabel:`Posted` to register the
-     payment.
-   - When clicking on :guilabel:`Register payment`, you can select the amount to pay and make a
-     partial or full payment.
+   - La factura del cliente o la factura del proveedor debe estar en estado :guilabel:`Publicado` para registar el pago.
+   - Al hacer click en :guilabel:`Registrar pago`, puedes seleccionar la cantidad a pagar y para hacer un pago parcial o un pago total.
    - If your main bank account is set as :ref:`outstanding account
      <bank/outstanding-accounts>`, and the payment is made in Odoo (not related to a
      bank statement), invoices and bills are directly registered in the status :guilabel:`Paid`.
