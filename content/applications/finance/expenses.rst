@@ -256,116 +256,109 @@ Los elementos ahora aparecerán en el informe que acaba de crear.
 
 Cuando se hayan completado todas las ediciones, haga clic en :guilabel:Guardar.
 
-Submit an expense report
-------------------------
+Presentar un informe de gastos
+------------------------------
 
-When an expense report is completed, the next step is to submit the report to a manager for
-approval. Reports must be individually submitted, and cannot be submitted in batches. Open the
-specific report from the list of expense reports (if the report is not already open). To view all
-expense reports, go to :menuselection:`Expenses app --> My Expenses --> My Reports`.
+Una vez que se completa un informe de gastos, el siguiente paso es presentar el informe a un gerente para su aprobación.
+Los informes deben presentarse individualmente y no se pueden presentar en lotes. Abra el informe específico
+desde la lista de informes de gastos (si el informe aún no está abierto). Para ver todos los informes de gastos,
+vaya a :menuselection:Aplicación de Gastos --> Mis Gastos --> Mis Informes.
 
-If the list is large, grouping the results by status may be helpful since only reports that are in a
-:guilabel:`Draft` mode need to be submitted, reports with an :guilabel:`Approved` or
-:guilabel:`Submitted` status do not.
+Si la lista es larga, agrupar los resultados por estado puede ser útil ya que solo se deben presentar los informes
+que estén en modo :guilabel:Borrador, los informes con estado :guilabel:Aprobado o :guilabel:Presentado no necesitan ser presentados.
 
 .. image:: expenses/expense-status.png
    :align: center
    :alt: Submit the report to the manager.
 
 .. note::
-   The status of each report is shown in the :guilabel:`Status` column on the far right. If the
-   :guilabel:`Status` column is not visible, click the :guilabel:`⋮ (additional options)` icon at
-   the end of the row, and check the box next to :guilabel:`Status`.
+  El estado de cada informe se muestra en la columna :guilabel:Estado en el extremo derecho. Si la columna
+  :guilabel:Estado no es visible, haga clic en el icono :guilabel:⋮ (opciones adicionales) al final de la 
+  fila y marque la casilla junto a :guilabel:Estado.
 
-Click on a report to open it, then click :guilabel:`Submit To Manager`. After submitting a report,
-the next step is to wait for the manager to approve it.
+Haga clic en un informe para abrirlo y luego haga clic en :guilabel:Presentar al Gerente. Después de presentar
+un informe, el siguiente paso es esperar a que el gerente lo apruebe.
 
 .. important::
-   The :ref:`expenses/approve`, :ref:`expenses/post`, and :ref:`expenses/reimburse` sections are
-   **only** for users with the *necessary rights*.
+   Las secciones :ref:expenses/approve, :ref:expenses/post y :ref:expenses/reimburse son solo para usuarios con los permisos necesarios.
 
 .. _expenses/approve:
 
-Approve expenses
-================
+Aprobación de gastos
+====================
 
-In Odoo, not just anyone can approve expense reports— only users with the necessary rights (or
-permissions) can. This means that a user must have at least *Team Approver* rights for the
-*Expenses* app. Employees with the necessary rights can review expense reports, and approve or
-reject them, as well as provide feedback thanks to the integrated communication tool.
+En Odoo, no cualquier usuario puede aprobar informes de gastos, solo los usuarios con los permisos necesarios pueden hacerlo.
+Esto significa que un usuario debe tener al menos los permisos de Aprobador de equipo para la aplicación de Gastos.
+Los empleados con los permisos necesarios pueden revisar los informes de gastos, aprobarlos o rechazarlos, así como
+proporcionar comentarios gracias a la herramienta de comunicación integrada.
 
-To see who has rights to approve, go to the main :menuselection:`Settings` app and click on
-:guilabel:`Manage Users`.
+Para ver quiénes tienen permisos para aprobar, vaya a la aplicación principal de :menuselection:Configuración y haga clic
+en :guilabel:Gestionar Usuarios.
 
 .. note::
-   If the *Settings* app is not available, then certain rights are not set on the account. In the
-   :guilabel:`Access Rights` tab of a user's card in the :menuselection:`Settings` app, the
-   :guilabel:`Administration` section is set to one of three options:
+   Si la aplicación de Configuración no está disponible, entonces ciertos permisos no están configurados en la cuenta.
+   En la pestaña :guilabel:Derechos de Acceso de la ficha de un usuario en la aplicación de :menuselection:Configuración,
+   la sección de :guilabel:Administración se establece en una de tres opciones:
 
-   - :guilabel:`None (blank)`: The user cannot access the *Settings* app at all.
-   - :guilabel:`Access Rights`: The user can only view the :guilabel:`User's & Companies` section of
-     the *Settings* app.
-   - :guilabel:`Settings`: The user has access to the entire *Settings* app with no restrictions.
+   - :guilabel:None (en blanco): El usuario no puede acceder en absoluto a la aplicación de Configuración.
+   - :guilabel:Derechos de Acceso: El usuario solo puede ver la sección de :guilabel:Usuarios y Compañías de la aplicación de Configuración.
+   - :guilabel:Configuración: El usuario tiene acceso a toda la aplicación de Configuración sin restricciones.
 
-   Please refer to :doc:`this document </applications/general/users/manage_users>` to learn more
-   about managing users and their access rights.
+   Consulte :doc:este documento </applications/general/users/manage_users> para obtener más información sobre cómo
+   administrar usuarios y sus derechos de acceso.
 
-Click on an individual to view their card, which displays the :guilabel:`Access Rights` tab in the
-default view. Scroll down to the :guilabel:`Human Resources` section. Under :guilabel:`Expenses`,
-there are four options:
+Haga clic en un individuo para ver su ficha, que muestra la pestaña :guilabel:Derechos de Acceso en la vista predeterminada.
+Desplácese hacia abajo hasta la sección de :guilabel:Recursos Humanos. Bajo :guilabel:Gastos, hay cuatro opciones:
 
-- :guilabel:`None (blank)`: A blank field means the user has no rights to view or approve expense
-  reports, and can only view their own.
-- :guilabel:`Team Approver`: The user can only view and approve expense reports for their own
-  specific team.
-- :guilabel:`All Approver`: The user can view and approve any expense report.
-- :guilabel:`Administrator`: The user can view and approve any expense report as well as access the
-  reporting and configuration menus in the *Expenses* app.
+- :guilabel:None (en blanco): Un campo en blanco significa que el usuario no tiene permisos para ver o aprobar informes de gastos, y solo puede ver los     suyos propios.
+- :guilabel:Aprobador de equipo: El usuario solo puede ver y aprobar informes de gastos para su equipo específico.
+- :guilabel:Aprobador de todo: El usuario puede ver y aprobar cualquier informe de gastos.
+- :guilabel:Administrador: El usuario puede ver y aprobar cualquier informe de gastos, así como acceder a los menús de informes y configuración en la 
+  aplicación de Gastos.
 
-Users who are able to approve expense reports (typically managers) can easily view all expense
-reports to validate. Go to :menuselection:`Expenses app --> Expense Reports  --> Reports to
-Approve`. This view lists all the expense reports that have been submitted but not approved, as
-noted by the :guilabel:`Submitted` tag in the status column.
+Los usuarios que pueden aprobar informes de gastos (generalmente gerentes) pueden ver fácilmente todos los informes
+de gastos para validarlos. Vaya a :menuselection:Aplicación de Gastos --> Informes de Gastos --> Informes por aprobar.
+Esta vista lista todos los informes de gastos que se han presentado pero no aprobado, como se indica por la etiqueta
+:guilabel:Presentado en la columna de estado.
 
 .. image:: expenses/reports-to-approve.png
    :align: center
    :alt: Reports to validate are found on the Reports to Approve page.
 
-Reports can be approved in two ways (individually or several at once) and refused only one way. To
-approve multiple expense reports at once, remain in the list view. First, select the reports to
-approve by clicking the check box next to each report, or click the box next to :guilabel:`Employee`
-to select all reports in the list. Next, click on the :guilabel:`⚙️ Action (gear)` icon, then click
-:guilabel:`Approve Report`.
+Los informes se pueden aprobar de dos formas (individualmente o varios a la vez) y solo hay una forma de rechazarlos.
+Para aprobar varios informes de gastos a la vez, permanezca en la vista de lista. Primero, seleccione los informes
+que desea aprobar haciendo clic en la casilla de verificación junto a cada informe, o haga clic en la casilla junto a
+:guilabel:Empleado para seleccionar todos los informes de la lista. A continuación, haga clic en el icono
+:guilabel:⚙️ Acción (engranaje), luego haga clic en :guilabel:Aprobar informe.
 
 .. image:: expenses/approve-report.png
    :align: center
    :alt: Approve multiple reports by clicking the checkboxes next to each report.
 
-To approve an individual report, click on a report to go to a detailed view of that report. In this
-view, several options are presented: :guilabel:`Approve`, :guilabel:`Refuse`, or :guilabel:`Reset to
-draft`. Click :guilabel:`Approve` to approve the report.
+Para aprobar un informe individual, haga clic en un informe para ir a una vista detallada de ese informe.
+En esta vista, se presentan varias opciones: :guilabel:Aprobar, :guilabel:Rechazar o :guilabel:Restablecer
+a borrador. Haga clic en :guilabel:Aprobar para aprobar el informe.
 
-If :guilabel:`Refuse` is clicked, a pop-up window appears. Enter a brief explanation for the refusal
-in the :guilabel:`Reason to refuse Expense` field, then click :guilabel:`Refuse`.
+Si se hace clic en :guilabel:Rechazar, aparecerá una ventana emergente. Ingrese una breve explicación para
+el rechazo en el campo :guilabel:Motivo del rechazo del gasto, luego haga clic en :guilabel:Rechazar.
 
 .. image:: expenses/refuse-expense.png
    :align: center
    :alt: Send messages in the chatter.
 
-Team managers can easily view all the expense reports for their team members. While in the
-:guilabel:`Reports to Approve` view, click on :guilabel:`Filters`, then click :guilabel:`My Team`.
-This presents all the reports for the manager's team.
+Los gerentes de equipo pueden ver fácilmente todos los informes de gastos de los miembros de su equipo.
+Mientras está en la vista de :guilabel:Informes por aprobar, haga clic en :guilabel:Filtros, luego haga clic
+en :guilabel:Mi equipo. Esto presenta todos los informes para el equipo del gerente.
 
 .. image:: expenses/my-team-filter.png
    :align: center
    :alt: Select the My Team filter.
 
 .. note::
-   If more information is needed, such as a receipt is missing, communication is easy from the
-   chatter. In an individual report, simply type in a message, tagging the proper person (if
-   needed), and post it to the chatter by clicking :guilabel:`Send`. The message is posted in the
-   chatter, and the person tagged will be notified via email of the message, as well as anyone
-   following.
+  Si se necesita más información, como si falta un recibo, la comunicación es fácil desde el chat. En un informe
+  individual, simplemente escriba un mensaje, etiquetando a la persona adecuada (si es necesario), y publíquelo
+  en el chat haciendo clic en :guilabel:Enviar. El mensaje se publica en el chat y la persona etiquetada recibirá
+  una notificación por correo electrónico del mensaje, así como cualquier persona que lo esté siguiendo.
 
    .. image:: expenses/chatter.png
       :align: center
@@ -373,151 +366,148 @@ This presents all the reports for the manager's team.
 
 .. _expenses/post:
 
-Post expenses in accounting
-===========================
+Registrar gastos en contabilidad.
+=================================
 
-Once an expense report is approved, the next step is to post the report to the accounting journal.
-To view all expense reports to post, go to :menuselection:`Expenses --> Expense Reports --> Reports
-To Post`.
+Una vez que se aprueba un informe de gastos, el siguiente paso es contabilizar el informe en el diario contable.
+Para ver todos los informes de gastos por contabilizar, vaya a
+:menuselection:Gastos --> Informes de Gastos --> Informes por contabilizar.
 
 .. image:: expenses/post-reports.png
    :align: center
    :alt: View reports to post by clicking on expense reports, then reports to post.
 
-Just like approvals, expense reports can be posted in two ways (individually or several at once). To
-post multiple expense reports at once, remain in the list view. First, select the reports to post by
-clicking the check box next to each report, or click the box next to :guilabel:`Employee` to select
-all reports in the list. Next, click on the :guilabel:`⚙️ Action (gear)` icon, then click
-:guilabel:`Post Entries`.
+Al igual que con las aprobaciones, los informes de gastos se pueden contabilizar de dos formas
+(individualmente o varios a la vez). Para contabilizar varios informes de gastos a la vez, permanezca
+en la vista de lista. Primero, seleccione los informes que desea contabilizar haciendo clic en la casilla
+de verificación junto a cada informe, o haga clic en la casilla junto a :guilabel:Empleado para seleccionar
+todos los informes de la lista. A continuación, haga clic en el icono :guilabel:⚙️ Acción (engranaje),
+luego haga clic en :guilabel:Contabilizar asientos.
 
 .. image:: expenses/post-entries.png
    :align: center
    :alt: Post multiple reports from the Post Entries view.
 
-To post an individual report, click on a report to go to the detailed view of that report. In this
-view, several options are presented: :guilabel:`Post Journal Entries`, :guilabel:`Report In Next
-Payslip`, or :guilabel:`Refuse`. Click :guilabel:`Post Journal Entries` to post the report.
+Para contabilizar un informe individual, haga clic en un informe para ir a una vista detallada de ese informe.
+En esta vista, se presentan varias opciones: :guilabel:Contabilizar asientos, :guilabel:Informe en el próximo
+recibo de pago o :guilabel:Rechazar. Haga clic en :guilabel:Contabilizar asientos para contabilizar el informe.
 
-If :guilabel:`Refuse` is clicked, a pop-up window appears. Enter a brief explanation for the refusal
-in the :guilabel:`Reason to refuse Expense` field, then click :guilabel:`Refuse`. Refused reports
-can be viewed by going to :menuselection:`Expenses app --> Expense Reports  --> All Reports`. This
-list shows all reports, including the refused ones.
+Si se hace clic en :guilabel:Rechazar, aparecerá una ventana emergente. Ingrese una breve explicación para el
+rechazo en el campo :guilabel:Motivo del rechazo del gasto, luego haga clic en :guilabel:Rechazar. Los informes
+rechazados se pueden ver yendo a :menuselection:Aplicación de Gastos --> Informes de Gastos --> Todos los informes.
+Esta lista muestra todos los informes, incluidos los rechazados.
 
 .. note::
-   To post expense reports to an accounting journal, the user must have following access rights:
+   Para contabilizar los informes de gastos en el diario contable, el usuario debe tener los siguientes derechos de acceso:
 
-   - Accounting: Accountant or Adviser
-   - Expenses: Manager
+   - Contabilidad: Contador o Asesor
+   - Gastos: Gerente
 
 .. _expenses/reimburse:
 
-Reimburse employees
-===================
+Reembolsar a los empleados.
+==========================
 
-After an expense report is posted to an accounting journal, the next step is to reimburse the
-employee. To view all expense reports to pay, go to :menuselection:`Expenses --> Expense Reports -->
-Reports To Pay`.
+Después de contabilizar un informe de gastos en el diario contable, el siguiente paso es reembolsar al empleado.
+Para ver todos los informes de gastos para pagar, vaya a :menuselection:Gastos --> Informes de Gastos --> Informes por pagar.
 
 .. image:: expenses/reports-to-pay.png
    :align: center
    :alt: View reports to pay by clicking on expense reports, then reports to pay.
 
-Just like approvals and posting, expense reports can be paid in two ways (individually or several at
-once). To pay multiple expense reports at once, remain in the list view. First, select the reports
-to pay by clicking the check box next to each report, or click the box next to :guilabel:`Employee`
-to select all reports in the list. Next, click on the :guilabel:`⚙️ Action (gear)` icon, then click
-:guilabel:`Register Payment`.
+Al igual que con las aprobaciones y la contabilización, los informes de gastos se pueden pagar de dos formas
+(individualmente o varios a la vez). Para pagar varios informes de gastos a la vez, permanezca en la vista de lista.
+Primero, seleccione los informes que desea pagar haciendo clic en la casilla de verificación junto a cada informe,
+o haga clic en la casilla junto a :guilabel:Empleado para seleccionar todos los informes de la lista. A continuación,
+haga clic en el icono :guilabel:⚙️ Acción (engranaje), luego haga clic en :guilabel:Registrar pago.
 
 .. image:: expenses/register-payment.png
    :align: center
    :alt: Post multiple reports by clicking the checkboxes, clicking the gear, then post the entries.
 
-To pay an individual report, click on a report to go to a detailed view of that report. Click
-:guilabel:`Register Payment` to pay the employee.
+Para pagar un informe individual, haga clic en un informe para ir a una vista detallada de ese informe.
+Haga clic en :guilabel:Registrar pago para pagar al empleado.
 
-Re-invoice expenses to customers
-================================
+Volver a facturar los gastos a los clientes.
+============================================
 
-If expenses are tracked on customer projects, expenses can be automatically charged back to the
-customer. This is done by creating an expense report, then creating a sales order with the expensed
-items on it. Then, managers approve the expense report, and the accounting department posts the
-journal entries. Finally, the customer is invoiced.
+Si los gastos se registran en proyectos de clientes, los gastos se pueden cargar automáticamente al cliente.
+Esto se hace creando un informe de gastos, luego creando una orden de venta con los elementos de gastos en ella.
+Luego, los gerentes aprueban el informe de gastos y el departamento de contabilidad contabiliza los asientos
+del diario. Finalmente, se factura al cliente.
 
-Setup
------
+Configuración
+-------------
 
-First, specify the invoicing policy for each expense product. Go to :menuselection:`Expenses app -->
-Configuration --> Expense Products`. Click on the expense product to edit, then click
-:guilabel:`Edit`. Under the :guilabel:`Invoicing` section, select the :guilabel:`Invoicing Policy`
-and :guilabel:`Re-Invoicing Policy` by clicking the radio button next to the desired selection.
+En primer lugar, especifique la política de facturación para cada producto de gastos. Vaya a :menuselection:Aplicación de Gastos
+--> Configuración --> Productos de Gastos. Haga clic en el producto de gastos para editarlo, luego haga clic en :guilabel:Editar.
+En la sección :guilabel:Facturación, seleccione la :guilabel:Política de facturación y la :guilabel:Política de re-facturación
+haciendo clic en el botón de radio junto a la selección deseada.
 
-:guilabel:`Invoicing Policy`:
+:guilabel:`Política de facturación`:
 
-- :guilabel:`Ordered quantities`: Expense product will only invoice expenses based on the ordered
-  quantity.
-- :guilabel:`Delivered quantities`: Expense product will only invoice expenses based on the
-  delivered quantity.
-
+- :guilabel:Cantidades pedidas: el producto de gastos solo facturará los gastos según la cantidad pedida.
+- :guilabel:Cantidades entregadas: el producto de gastos solo facturará los gastos según la cantidad entregada.
 :guilabel:`Re-Invoicing Policy`:
 
-- :guilabel:`No`: Expense product will not be re-invoiced.
-- :guilabel:`At cost`: Expense product will invoice expenses at their real cost.
-- :guilabel:`At sales price`: Expense product will invoice the price set on the sale order.
+- :guilabel:No: el producto de gastos no será re-facturado.
+- :guilabel:Al costo: el producto de gastos facturará los gastos a su costo real.
+- :guilabel:Al precio de venta: el producto de gastos facturará el precio establecido en la orden de venta.
 
-Create an expense
------------------
+Crear un gasto
+--------------
 
-First, when :ref:`creating a new expense <expenses/new>`, the correct information needs to be
-entered in order to re-invoice a customer. Select the :guilabel:`Customer to Reinvoice` from the
-drop-down menu. Next, select the :guilabel:`Analytic Account` the expense will be posted to.
+En primer lugar, al :ref:crear un nuevo gasto <expenses/new>, es necesario ingresar la información correcta
+para volver a facturar a un cliente. Seleccione el :guilabel:Cliente a volver a facturar en el menú desplegable.
+A continuación, seleccione la :guilabel:Cuenta analítica en la que se registrará el gasto.
 
 .. image:: expenses/reinvoice-expense.png
    :align: center
    :alt: Ensure the customer to be invoiced is called out on the expense.
 
-Create a quote and sales order
-------------------------------
+Crear una cotización y una orden de venta
+------------------------------------------
 
-In the :menuselection:`Sales` app, create a quote for the customer being invoiced, listing the
-expense products. First, click :guilabel:`Create` to create a new quotation. Next, select the
-:guilabel:`Customer` being invoiced for the expenses from the drop-down menu.
+En la aplicación :menuselection:Ventas, cree una cotización para el cliente que se está facturando, que
+incluya los productos de gastos. Primero, haga clic en :guilabel:Crear para crear una nueva cotización.
+A continuación, seleccione el :guilabel:Cliente que se está facturando por los gastos en el menú desplegable.
 
-In the :guilabel:`Order Lines` tab, click :guilabel:`Add a product`. In the :guilabel:`Product`
-field, select the first item being invoiced from the drop-down menu, or type in the product name.
-Then, update the :guilabel:`Quantity`, the :guilabel:`Delivered` quantity, and the :guilabel:`Unit
-Price` if needed. Repeat this for all products being invoiced. When all the products have been added
-to the quote, click :guilabel:`Confirm` and the quotation becomes a sales order.
+En la pestaña :guilabel:Líneas de pedido, haga clic en :guilabel:Agregar un producto. En el campo :guilabel:Producto,
+seleccione el primer artículo que se está facturando en el menú desplegable o escriba el nombre del producto. Luego,
+actualice la :guilabel:Cantidad, la cantidad :guilabel:Entregada y el :guilabel:Precio unitario si es necesario.
+Repita esto para todos los productos que se estén facturando. Cuando se hayan agregado todos los productos a la
+cotización, haga clic en :guilabel:Confirmar y la cotización se convierte en una orden de venta.
 
 .. image:: expenses/expenses-salesorder.png
    :align: center
    :alt: Create and confirm the sales order with the expenses listed as products.
 
-Once the quote turns into a sales order, a :guilabel:`Delivered` column appears. The delivered
-quantity must be updated for each item. Click on the `0.000` field for each product, and enter the
-delivered quantity. When all delivered quantities have been entered, click :guilabel:`Save`.
+Una vez que la cotización se convierte en una orden de venta, aparece una columna de :guilabel:Entregado.
+La cantidad entregada debe actualizarse para cada artículo. Haga clic en el campo 0,000 para cada producto
+y escriba la cantidad entregada. Cuando se hayan ingresado todas las cantidades entregadas, haga clic
+en :guilabel:Guardar.
 
-Validate and post expenses
---------------------------
+Validar y publicar un gasto
+---------------------------
 
-Only employees with permissions (typically managers or supervisors) can :ref:`approve expenses
-<expenses/approve>`. Before approving an expense report, ensure the :guilabel:`Analytic Account` is
-set on every expense line of a report. If an :guilabel:`Analytic Account` is missing, click
-:guilabel:`Edit` and select the correct account from the drop-down menu, then click
-:guilabel:`Approve` or :guilabel:`Refuse`.
+Solo los empleados con permisos (generalmente gerentes o supervisores) pueden :ref:aprobar gastos<expenses/approve>.
+Antes de aprobar un informe de gastos, asegúrese de que se haya establecido la :guilabel:Cuenta analítica en cada línea
+de gastos del informe. Si falta una :guilabel:Cuenta analítica, haga clic en :guilabel:Editar y seleccione la cuenta
+correcta en el menú desplegable, luego haga clic en :guilabel:Aprobar o :guilabel:Rechazar.
 
-The accounting department is typically responsible for :ref:`posting journal entries
-<expenses/post>`. Once an expense report is approved, it can then be posted.
+El departamento de contabilidad es típicamente el responsable de :ref:contabilizar asientos de diario<expenses/post>.
+Una vez que se aprueba un informe de gastos, se puede contabilizar.
 
-Invoice expenses
-----------------
+Factura de gastos
+-----------------
 
-Once the quote has turned into a sales order, and the expense report has been approved, it is time
-to invoice the customer. Go to :menuselection:`Sales app --> To Invoice --> Orders to Invoice` to
-view the sales orders ready to be invoiced.
+Una vez que la cotización se ha convertido en una orden de venta y se ha aprobado el informe de gastos, es
+hora de facturar al cliente. Vaya a :menuselection:Aplicación de ventas --> Para facturar --> Órdenes a facturar
+para ver las órdenes de venta listas para ser facturadas.
 
-Next, find the sales order related to the expense report, click into it, and then click
-:guilabel:`Create Invoice` and a :guilabel:`Create invoices` pop-up window appears. Select if the
-invoice is a :guilabel:`Regular invoice`, :guilabel:`Down payment (percentage)`, or :guilabel:`Down
-payment (fixed amount)` by clicking the radio button next to the selection. For either down payment
-options, enter the amount (fixed or percentage) in the :guilabel:`Down Payment Amount` field.
-Finally, click either :guilabel:`create and view invoice` or :guilabel:`create invoice`.
+A continuación, busque la orden de venta relacionada con el informe de gastos, haga clic en ella y luego haga clic
+en :guilabel:Crear factura. Aparecerá una ventana emergente de :guilabel:Crear facturas. Seleccione si la factura
+es una :guilabel:Factura regular, :guilabel:Pago a cuenta (porcentaje) o :guilabel:Pago a cuenta (cantidad fija)
+haciendo clic en el botón de radio junto a la selección. Para las opciones de pago a cuenta, ingrese la cantidad
+(fija o porcentaje) en el campo :guilabel:Cantidad del pago a cuenta. Finalmente, haga clic en :guilabel:Crear y ver
+factura o :guilabel:Crear factura.
