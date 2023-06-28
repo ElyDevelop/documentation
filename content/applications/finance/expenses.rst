@@ -101,164 +101,160 @@ el gasto. Por ejemplo, un boleto de avión sería apropiado para un :guilabel:`P
      Cuando un impuesto es seleccionado el valor :guilabel:`Total` será actualizado en tiempo real update in real time 
      para mostrar los impuestos añadidos.
 
-- :guilabel:`Pagado por`: Click the radio button to indicate who paid for the expense and should be
-  reimbursed. If the employee paid for the expense (and should be reimbursed) select
-  :guilabel:`Employee (to reimburse)`. If the company paid directly instead (e.g. if the company
-  credit card was used to pay for the expense) select :guilabel:`Company`.
-- :guilabel:`Expense Date`: Using the calendar module, enter the date the expense was incurred. Use
-  the :guilabel:`< (left)` and :guilabel:`> (right)` arrows to navigate to the correct month, then
-  click on the specific day to enter the selection.
-- :guilabel:`Bill Reference`: If there is any reference text that should be included for the
-  expense, enter it in this field.
-- :guilabel:`Account`: Select the expense account that this expense should be logged on from the
-  drop-down menu.
-- :guilabel:`Employee`: Using the drop-down menu, select the employee this expense is for.
-- :guilabel:`Customer to Reinvoice`: If the expense is something that should be paid for by a
-  customer, select the customer that will be invoiced for this expense from the drop-down menu. For
-  example, if a customer wishes to have an on-site meeting, and agrees to pay for the expenses
-  associated with it (such as travel, hotel, meals, etc.), then all expenses tied to that meeting
-  would indicate that customer as the :guilabel:`Customer to Reinvoice`.
-- :guilabel:`Analytic Account`: Select the account the expense should be written against from the
-  drop-down menu.
-- :guilabel:`Company`: If multiple companies are set-up, select the company this expense should be
-  filed for from the drop-down menu. If there is only one company, this field will be automatically
-  populated.
-- :guilabel:`Notes...`: If any notes are needed in order to clarify the expense, enter them in the
-  notes field.
+- :guilabel:`Pagado por`: Seleccione el botón de opción para indicar quién pagó el gasto y quién debe ser reembolsado. 
+   Si el empleado pagó el gasto (y debe ser reembolsado), seleccione :guilabel:Empleado (para reembolsar). Si la empresa 
+   pagó directamente (por ejemplo, si se usó la tarjeta de crédito de la empresa para pagar el gasto), 
+   seleccione :guilabel:`Empresa`.
+- :guilabel:Fecha de gasto: Utilice el módulo de calendario para ingresar la fecha en que se realizó el gasto. 
+   Use las flechas :guilabel:< (izquierda) y :guilabel:> (derecha) para navegar hasta el mes correcto, y luego 
+   haga clic en el día específico para ingresar la selección.
+- :guilabel:Referencia de factura: Si hay algún texto de referencia que deba incluirse para el gasto, ingréselo en este campo.
+- :guilabel:Cuenta: Seleccione la cuenta de gastos en la que se debe registrar este gasto del menú desplegable.
+- :guilabel:Empleado: Utilizando el menú desplegable, seleccione el empleado para el que es este gasto.
+- :guilabel:Cliente a Re-facturar: Si el gasto es algo que debe ser pagado por un cliente, seleccione el cliente que 
+   será facturado por este gasto del menú desplegable. Por ejemplo, si un cliente desea tener una reunión en el lugar,
+   y acepta pagar los gastos asociados (como viajes, hotel, comidas, etc.), entonces todos los gastos relacionados 
+   con esa reunión indicarían a ese cliente como el :guilabel:Cliente a Re-facturar.
+- :guilabel:Cuenta Analítica: Seleccione la cuenta en la que se debe registrar el gasto en el menú desplegable.
+- :guilabel:Empresa: Si se han configurado varias empresas, seleccione la empresa para la que se debe presentar 
+   este gasto del menú desplegable. Si solo hay una empresa, este campo se completará automáticamente.
+- :guilabel:Notas...: Si se necesitan notas para aclarar el gasto, ingréselas en el campo de notas.
 
-Once all the fields have been filled out, click :guilabel:`Save`.
+Una vez que se hayan completado todos los campos, haga clic en :guilabel:Guardar.
 
 .. image:: expenses/expense-filled-in.png
    :align: center
    :alt: A filled in expense form for a client lunch.
 
-Attach a receipt
-~~~~~~~~~~~~~~~~
+Adjuntar un recibo.
+~~~~~~~~~~~~~~~~~~~
 
-After the expense is saved, the next step is to attach a receipt. A new :guilabel:`Attach Receipt`
-button appears after the entry is saved, beneath the former :guilabel:`Save` button (which turns
-into an :guilabel:`Edit` button).
+Después de guardar el gasto, el siguiente paso es adjuntar un recibo. Aparece un nuevo botón :guilabel:Adjuntar 
+Recibo después de guardar la entrada, debajo del anterior botón :guilabel:Guardar (que se convierte en un botón :guilabel:Editar).
 
 .. image:: expenses/save-receipt.png
    :align: center
    :alt: Attach a receipt after saving the record.
 
-Click the new :guilabel:`Attach Receipt` button, and a file explorer appears. Navigate to the
-receipt to be attached, and click :guilabel:`Open`. A new :guilabel:`Receipts` smart button appears
-at the top, and the new receipt is recorded in the chatter. More than one receipt can be attached to
-an individual expense, as needed. The number of receipts attached to the expense will be noted on
-the smart button.
+Haga clic en el nuevo botón :guilabel:Adjuntar Recibo y aparecerá un explorador de archivos. Navegue hasta el 
+recibo que desea adjuntar y haga clic en :guilabel:Abrir. Aparecerá un nuevo botón inteligente :guilabel:Recibos 
+en la parte superior, y el nuevo recibo se registrará en el chatter. Se pueden adjuntar más de un recibo a un 
+gasto individual, según sea necesario. El número de recibos adjuntos al gasto se indicará en el botón inteligente.
 
 .. image:: expenses/receipt-smartbutton.png
    :align: center
    :alt: Attach a receipt after saving the record.
 
-Automatically create new expenses from an email
------------------------------------------------
+Crear automáticamente nuevos gastos a partir de un correo electrónico.
+---------------------------------------------------------------------
 
-Instead of individually creating each expense in the *Expenses* app, expenses can be automatically
-created by sending an email to an email alias.
+En lugar de crear individualmente cada gasto en la aplicación Gastos, los gastos pueden ser creados automáticamente al 
+enviar un correo electrónico a una dirección de correo electrónico específica.
 
-To do so, first, an email alias needs to be configured. Go to :menuselection:`Expenses app -->
-Configuration --> Settings`. Ensure :guilabel:`Incoming Emails` is checked off.
+Para hacerlo, primero es necesario configurar una dirección de correo electrónico. 
+Vaya a :menuselection:Aplicación de Gastos --> Configuración --> Configuración. Asegúrese de que la opción
+:guilabel:Correos electrónicos entrantes esté seleccionada.
 
 .. image:: expenses/email-alias.png
    :align: center
    :alt: Create the domain alias by clicking the link.
 
 .. note::
-   If the domain alias needs to be set up, :guilabel:`Setup your domain alias` will appear beneath
-   the incoming emails check box instead of the email address field. Refer to this documentation for
-   setup instructions and more information: :doc:`/administration/maintain/domain_names`. Once the
-   domain alias is configured, the email address field will be visible beneath the incoming emails
-   section.
+  Si es necesario configurar el alias de dominio, en lugar del campo de dirección de correo electrónico, 
+  aparecerá el enlace :guilabel:Configura tu alias de dominio debajo de la casilla de verificación de correos 
+  electrónicos entrantes. Consulte esta documentación para obtener instrucciones de configuración y más información:
+  :doc:/administration/maintain/domain_names. Una vez que se haya configurado el alias de dominio, el campo de 
+  dirección de correo electrónico será visible debajo de la sección de correos electrónicos entrantes.
 
-Next, enter the email address to be used in the email field, then click :guilabel:`Save`. Now that
-the email address has been entered, emails can be sent to that alias to create new expenses without
-having to be in the Odoo database.
+A continuación, ingrese la dirección de correo electrónico que se utilizará en el campo de correo electrónico y 
+luego haga clic en :guilabel:Guardar. Ahora que se ha ingresado la dirección de correo electrónico, se pueden 
+enviar correos electrónicos a esa dirección para crear nuevos gastos sin tener que estar en la base de datos de Odoo.
 
-To submit an expense via email, create a new email and enter the product's *internal reference* code
-(if available) and the amount of the expense in the email subject. Next, attach the receipt to the
-email. Odoo creates the expense by taking the information in the email subject and combining it with
-the receipt.
+Para enviar un gasto por correo electrónico, cree un nuevo correo electrónico e ingrese el código de referencia 
+interna del producto (si está disponible) y el monto del gasto en el asunto del correo electrónico. A continuación, 
+adjunte el recibo al correo electrónico. Odoo crea el gasto tomando la información en el asunto del correo electrónico 
+y combinándola con el recibo adjunto.
 
-To check an expense product's internal reference, go to :menuselection:`Expenses app -->
-Configuration --> Expense Products`. If an internal reference is listed on the product, it is
-visible in this view as :guilabel:`(Ref###)`.
+Para verificar la referencia interna de un producto de gasto, vaya a :menuselection:Aplicación de Gastos --> 
+Configuración --> Productos de Gastos. Si se indica una referencia interna en el producto, se mostrará en esta 
+vista como :guilabel:(Ref###).
 
 .. image:: expenses/internal-ref-numbers.png
    :align: center
    :alt: Internal reference numbers are listed in the main Expense Products view.
 
-To add an internal reference on an expense product, click on the product, then click
-:guilabel:`Edit`. In edit mode, enter the :guilabel:`Internal Reference` in the field. Beneath the
-:guilabel:`Internal Reference` field, this sentence appears: :guilabel:`Use this reference as a
-subject prefix when submitting by email.`.
+Para agregar una referencia interna en un producto de gasto, haga clic en el producto y luego en :guilabel:Editar.
+En el modo de edición, ingrese la :guilabel:Referencia Interna en el campo correspondiente. Debajo del campo de
+:guilabel:Referencia Interna, aparece la siguiente frase: :guilabel:Usar esta referencia como un prefijo del 
+asunto al enviar por correo electrónico..
 
 .. image:: expenses/meals-internal-reference.png
    :align: center
    :alt: Internal reference numbers are listed in the main Expense Products view.
 
 .. note::
-   For security purposes, only authenticated employee emails are accepted by Odoo when creating an
-   expense from an email. To confirm an authenticated employee email address, go to the employee
-   card in the :guilabel:`Employees` app, and refer to the :guilabel:`Work Email` in the main field.
+  Por motivos de seguridad, solo se aceptan correos electrónicos de empleados autenticados por Odoo al crear 
+  un gasto desde un correo electrónico. Para confirmar una dirección de correo electrónico de empleado autenticada, 
+  vaya a la tarjeta del empleado en la aplicación :guilabel:Empleados y consulte el campo :guilabel:Correo electrónico de trabajo.
 
    .. image:: expenses/authenticated-email-address.png
       :align: center
       :alt: Create the domain alias by clicking the link.
 
-.. example::
-   If submitting an expense via email for a $25.00 meal during a work trip, the email subject would
-   be `Ref005 Meal $25.00`.
+.. Ejemplo::
+  Si se envía un gasto por correo electrónico por una comida de $25.00 durante un viaje de trabajo, 
+  el asunto del correo electrónico sería Ref005 Comida $25.00.
 
-   Explanation:
 
-   - The :guilabel:`Internal Reference` for the expense product `Meals` is `Ref005`
-   - The :guilabel:`Cost` for the expense is `$25.00`
 
-Create an expense report
-========================
+ Explicación:
 
-When expenses are ready to submit (such as at the end of a business trip, or once a month), an
-*expense report* needs to be created. Go to the main :menuselection:`Expenses` app dashboard, which
-displays a default :guilabel:`My Expenses` view, or go to :menuselection:`Expenses app --> My
-Expenses --> My Expenses to Report`.
+   - La :guilabel:Referencia Interna para el producto de gasto Comida es Ref005
+   - El :guilabel:Costo del gasto es $25.00
 
-First, each individual expense for the report must be selected by clicking the check box next to
-each entry, or quickly select all the expenses in the list by clicking the check box next to
-:guilabel:`Expense Date`.
+Crear un informe de gastos
+==========================
+
+Cuando los gastos están listos para ser presentados (como al final de un viaje de negocios o una vez al mes), 
+es necesario crear un informe de gastos. Vaya al panel principal de la aplicación :menuselection:Gastos, 
+que muestra la vista predeterminada :guilabel:Mis Gastos,
+o vaya a :menuselection:Aplicación de Gastos --> Mis Gastos --> Mis Gastos a Reportar.
+
+En primer lugar, se deben seleccionar cada gasto individual para el informe haciendo clic en la casilla de
+verificación junto a cada entrada, o seleccionar rápidamente todos los gastos en la lista haciendo clic
+en la casilla de verificación junto a :guilabel:Fecha del Gasto.
 
 .. image:: expenses/create-report.png
    :align: center
    :alt: Select the expenses to submit, then create the report.
 
-Once the expenses have been selected, click the :guilabel:`Create Report` button. The new report
-appears with all the expenses listed, and the number of documents is visible in the
-:guilabel:`Documents` smart button.
+Una vez que se hayan seleccionado los gastos, haga clic en el botón :guilabel:Crear Informe (o similar).
+El nuevo informe aparece con todos los gastos listados, y el número de documentos es visible en el botón
+inteligente :guilabel:Documentos.
 
-It is recommended to add a short summary for each report to help keep expenses organized. Click the
-:guilabel:`Edit` button, and the :guilabel:`Expense Report Summary` field appears. Enter a short
-description for the expense report (such as `Client Trip NYC`, or `Repairs for Company Car`). Next,
-select a :guilabel:`Manager` from the drop-down menu to assign a manager to review the report.
+Es recomendable agregar un breve resumen para cada informe para ayudar a mantener los gastos organizados.
+Haga clic en el botón :guilabel:Editar, y aparecerá el campo :guilabel:Resumen del Informe de Gastos.
+Ingrese una breve descripción para el informe de gastos (como Viaje a Cliente en NYC o Reparaciones
+para Vehículo de la Empresa). A continuación, seleccione un :guilabel:Gerente en el menú desplegable
+para asignar un gerente para revisar el informe.
 
 .. image:: expenses/expense-report-summary.png
    :align: center
    :alt: Enter a short description and select a manager for the report.
 
-If some expenses are not on the report that should be, they can still be added. Click :guilabel:`Add
-a line` at the bottom of the :guilabel:`Expense` tab. Click the check box next to each expense to
-add, then click :guilabel:`Select`. The items now appear on the report that was just created.
+Si algunos gastos no están en el informe y deberían estarlo, aún se pueden agregar. Haga clic en
+:guilabel:Agregar línea en la parte inferior de la pestaña :guilabel:Gastos. Seleccione la casilla
+de verificación junto a cada gasto que desea agregar y luego haga clic en :guilabel:Seleccionar.
+Los elementos ahora aparecerán en el informe que acaba de crear.
 
 .. image:: expenses/add-an-expense-line.png
    :align: center
    :alt: Add more expenses to the report before submitting.
 
 .. note::
-   :guilabel:`Add a line` only appears when the document is in edit mode. It does not appear
-   otherwise.
+   El botón :guilabel:Agregar línea solo aparece cuando el documento está en modo de edición. No aparece de otra manera.
 
-When all edits have been completed, click :guilabel:`Save`.
+Cuando se hayan completado todas las ediciones, haga clic en :guilabel:Guardar.
 
 Submit an expense report
 ------------------------
