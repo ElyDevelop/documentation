@@ -4,12 +4,10 @@
 :show-toc:
 
 =========
-Inventory
+Inventario
 =========
 
-**Odoo Inventory** is both an inventory application and a warehouse management system, with an
-advanced barcode scanner app. Learn how to manage lead times, automate replenishments, and configure
-advanced routes like drop-shipping, cross-docks, etc.
+**Inventario de Odoo** es tanto una aplicación de inventario como un sistema de gestión de almacenes, con una aplicación avanzada de escáner de códigos de barras. Aprenda cómo gestionar los tiempos de espera, automatizar los repuestos y configurar rutas avanzadas como el envío directo, los cruces de muelle, etc.
 
 .. seealso::
    - `Odoo Tutorials: Inventory <https://www.odoo.com/slides/inventory-24>`_
