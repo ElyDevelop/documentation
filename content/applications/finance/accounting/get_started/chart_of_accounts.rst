@@ -1,65 +1,64 @@
 =================
-Chart of accounts
+Plan de cuentas
 =================
 
-The **chart of accounts (COA)** is the list of all the accounts used to record financial
-transactions in the general ledger of an organization.
+El plan de cuentas es la lista de todas las cuentas que se utilizan para
+registrar transacciones financieras en el libro mayor de una organización.
 
-The accounts are usually listed in the order of appearance in the financial reports. Most of the
-time, they are listed as follows :
+Normalmente, las cuentas se listan en el orden en que aparecen en los
+reportes financieros. La mayoría de las veces se listan así:
 
-- Balance Sheet accounts:
+- Cuentas del balance general:
 
-  - Assets
-  - Liabilities
-  - Equity
+  - Activos
+  - Pasivos
+  - Capital
 
-- Profit & Loss:
+- Estado de resultados:
 
-  - Income
-  - Expense
+  - Ingresos
+  - Gastos
 
-When browsing your chart of accounts, you can filter the accounts by number, in the left column, and
-also group them by :guilabel:`Account Type`.
+En su plan de cuentas puede filtrar las cuentas por su número en la columna de
+la izquierda, y también agruparlas por tipo de cuenta.
 
 .. image:: chart_of_accounts/chart-of-accounts.png
    :align: center
    :alt: Group the accounts by type in Odoo Accounting
 
-Configuration of an account
+Configuración de una cuenta
 ===========================
 
-The country you select at the creation of your database (or additional company on your database)
-determines which **fiscal localization package** is installed by default. This package includes a
-standard chart of accounts already configured according to the country's regulations. You can use
-it directly or set it according to your company's needs.
+El país que seleccione en la creación de su base de datos (o la empresa adicional en su base de datos)
+determina qué paquete de localización fiscal se instala de forma predeterminada. Este paquete incluye
+un plan de cuentas estándar ya configurado de acuerdo con la normativa del país. Puede utilizarlo
+directamente o configurarlo según las necesidades de su empresa.
 
-.. warning::
-   It is not possible to modify the **fiscal localization** of a company once a journal entry has
-   been posted.
+.. Advertencia::
+   No es posible modificar la localización fiscal de una empresa una vez que se haya
+   registrado un asiento contable.
 
-To create a new account, go to :menuselection:`Accounting --> Configuration --> Chart of Accounts`,
-click on :guilabel:`Create`, and fill out the form.
+Para crear una nueva cuenta, vaya a Contabilidad ‣ Configuración ‣ Plan de cuentas,
+haga clic en crear y conplete el formulario.
 
-Code and name
--------------
+Código y nombre
+---------------
 
-Each account is identified by its **code** and **name**, which also indicates the account's purpose.
+Cada cuenta se identifica con su código y nombre, los cuales también indican el objetivo de la cuenta.
 
 .. _chart-of-account/type:
 
-Type
+Tipo
 ----
 
-Correctly configuring the **account type** is critical as it serves multiple purposes:
+Es muy importante configurar de forma correcta el tipo de cuenta. Hacerlo tiene varios objetivos:
 
-- Information on the account's purpose and behavior
-- Generate country-specific legal and financial reports
-- Set the rules to close a fiscal year
-- Generate opening entries
+- Información del propósito y comportamiento de la cuenta
+- Generar reportes legales y financieros específicos del país
+- Establecer las reglas para cerrar el año fiscal
+- Generar asientos de apertura
 
-To configure an account type, open the :guilabel:`Type` field's drop-down selector and select the
-right type among the following list:
+Para configurar un tipo de cuenta, abra el selector desplegable del campo tipo y elija el más adecuado de la siguiente lista:
 
 +---------------+--------------+-------------------------+
 | Report        | Category     | Account Types           |
@@ -101,85 +100,79 @@ right type among the following list:
 |Other          | Other        | Off-Balance Sheet       |
 +---------------+--------------+-------------------------+
 
-Assets, deferred expenses, and deferred revenues automation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Automatización de activos y gastos e ingresos diferidos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Some **account types** display a new field **to automate** the creation of :ref:`assets
-<assets-automation>` entries, :ref:`deferred expenses <deferred-expenses-automation>` entries,
-and :ref:`deferred revenues <deferred-revenues-automation>` entries.
+Algunos tipos de cuentas cuentan con un nuevo campo para automatizar la creación de asientos de activos,
+así como asientos de gastos diferidos y de ingresos diferidos.
 
-You have three choices for the :guilabel:`Automation` field:
+Hay tres opciones para el campo automatización:
 
-#. :guilabel:`No`: this is the default value. Nothing happens.
-#. :guilabel:`Create in draft`: whenever a transaction is posted on the account, a draft entry is
-   created, but not validated. You must first fill out the corresponding form.
-#. :guilabel:`Create and validate`: you must also select a **model**. Whenever a transaction is
-   posted on the account, an entry is created and immediately validated.
+#. :guilabel:`No`: es el valor predeterminado. No pasa nada.
+#. :guilabel:`Crear en borrador`: cuando se registra una transacción en la cuenta, se crea un borrador de asiento,
+    pero no se valida. Primero debe completar el formulario correspondiente.
+#. :guilabel:`Crear y validar`: también debe seleccionar un modelo. Cuando se registra una transacción en la cuenta,
+    se crea un asiento y se valida de inmediato.
 
-Default taxes
--------------
+Impuestos predeterminados
+-------------------------
 
-Select a **default tax** that will be applied when this account is chosen for a product sale or
-purchase.
+Seleccione un **impuesto predeterminado** que se aplicará cuando esta cuenta se use para la venta o compra de un producto.
 
-Tags
-----
+Etiquetas
+---------
 
-Some accounting reports require **tags** to be set on the relevant accounts. By default, you can
-choose among the tags that are used by the *Cash Flow Statement*.
+Algunos reportes contables requieren que se establezcan **etiquetas** en las cuentas relevantes. De forma predeterminada, puede escoger entre las etiquetas que utiliza el *Estado de cuenta de flujos de efectivo*.
 
-Account groups
---------------
+Grupos de cuentas
+-----------------
 
-**Account groups** are useful to list multiple accounts as *sub-accounts* of a bigger account and
-thus consolidate reports such as the **Trial Balance**. By default, groups are handled automatically
-based on the code of the group. For example, a new account `131200` is going to be part of the group
-`131000`.
+Los **grupos de cuentas** sirven para listar múltiples cuentas como *subcuentas* de una cuenta más grande y,
+por lo tanto, consolidar reportes como la **Balanza de Comprobación**. De forma predeterminada, los grupos se
+gestionan según el código del grupo.  Por ejemplo, una nueva cuenta `131200` será parte del grupo `131000`.
 
-Create account groups manually
-------------------------------
+Crear grupos de cuentas de forma manual
+---------------------------------------
 
 .. note::
-   Regular users should not need to create account groups manually. The following section is only
-   intended for rare and advanced use cases.
+  Los usuarios normales no deberían necesitar crear grupos de cuentas de forma manual. La siguiente sección solo
+  está pensada para casos de uso poco frecuentes y avanzados.
 
-To create a new account group, :ref:`developer mode <developer-mode>` and head to
-:menuselection:`Accounting app --> Configuration --> Account Groups`. Here, create a new group and
-enter the :guilabel:`name, code prefix, and company` to which that group account should be
-available. Note that you must enter the same code prefix in both :guilabel:`From` and :guilabel:`to`
-fields.
+Para crear un nuevo grupo de cuentas debe activar el :ref:`developer mode <developer-mode>` y acceder a la aplicación
+:menuselection:`Contabilidad --> Configuración --> Grupo de cuentas`. Cree un nuevo grupo, agregue su
+:guilabel:`nombre, prefijo de nombre, y empresa` para la cual el grupo estará disponible.
+Tome en cuenta que debe introducir el mismo prefijo de código en los campos :guilabel:`De` and :guilabel:`A`.
 
 .. image:: chart_of_accounts/account-groups.png
    :align: center
    :alt: Account groups creation.
 
-To display your **Trial Balance** report with your account groups, go to :menuselection:`Accounting
-app-->Reporting-->Trial Balance`, then open the :guilabel:`Options` menu and select
-:guilabel:`Hierarchy and Subtotals`.
+Para visualizar sus grupos de cuentas en el reporte de **balanza de comprobación**, vaya a la aplicación
+:menuselection:`Contabilidad-->Reportes-->Balanza de comprobación`, luego abra el menú :guilabel:`Optiones` y seleccione
+:guilabel:`Jerarquía y subtotales`.
 
 .. image:: chart_of_accounts/trial-balance.png
    :align: center
    :alt: Account Groups in the Trial Balance in Odoo Accounting
 
-Allow reconciliation
---------------------
+Permitir conciliaciones
+-----------------------
 
-Some accounts, such as accounts made to record the transactions of a payment method, can be used for
-the reconciliation of journal entries.
+Algunas cuentas, como las que registran transacciones de un método de pago, se pueden usar para conciliar los asientos contables.
 
-For example, an invoice paid with a credit card can be marked as :guilabel:`paid` if reconciled with
-its payment. Therefore, the account used to record credit card payments needs to be configured as
-**allowing reconciliation**.
+Por ejemplo, una factura que se pagó con una tarjeta de crédito puede marcarse como :guilabel:`pagada` si se concilia con 
+el pago correspondiente. Por lo tanto, la cuenta que se utiliza para registrar pagos con tarjeta de crédito se debe configurar
+para **permitir conciliaciones**.
 
-To do so, check the :guilabel:`Allow Reconciliation` box in the account's settings, and save.
+Para hacerlo, seleccione la casilla :guilabel:`permitir conciliaci'on` en los ajustes de la cuenta y guarde los cambios.
 
-Deprecated
-----------
+Obsoleta
+--------
 
-It is not possible to delete an account once a transaction has been recorded on it. You can make
-them unusable by using the **Deprecated** feature.
+No es posible eliminar una cuenta una vez que se haya registrado una transacción en ella. Puede hacerla inutilizable
+al usar la función **Obsoleta**.
 
-To do so, check the :guilabel:`Deprecated` box in the account's settings, and save.
+Para hacerlo, seleccione la casilla :guilabel:`Obsoleta` en los ajustes de la cuenta y guarde los cambios.
 
 .. seealso::
    * :doc:`cheat_sheet`
