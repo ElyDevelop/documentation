@@ -1,116 +1,107 @@
 :show-content:
 
 ========
-Expenses
+Gastos
 ========
 
-Odoo **Expenses** streamlines the management of expenses.  After an employee submits their expenses
-in Odoo, the expenses are reviewed by management and accounting teams. Once approved, payments can
-then be processed and disbursed back to the employee for reimbursement(s).
+Odoo **Gastos** simplifica la gestión de gastos. Después de que un empleado presenta sus gastos en Odoo, estos son revisados por los equipos de gestión y contabilidad. Una vez aprobados, los pagos pueden ser procesados y desembolsados de vuelta al empleado para su reembolso.
 
 .. seealso::
    `Odoo Expenses: product page <https://www.odoo.com/app/expenses>`_
 
-Set expense types
-=================
+Establecer tipos de gastos
+==========================
 
-The first step to track expenses is to configure the different *expense types* for the company
-(managed as *products* in Odoo). Each "product" can be as specific or generalized as needed. Go to
-:menuselection:`Expenses app --> Configuration --> Expense Products` to view the current expensable
-products in a default kanban view.
+El primer paso para hacer un seguimiento de los gastos es configurar los diferentes *tipos de gastos* para la empresa
+(administrados como *productos* en Odoo). Cada "producto" puede ser tan específico o generalizado como se necesite. Vaya a
+:menuselection:`Módulo Gastos --> Configuración --> Productos de gastos` para ver los productos de gastos actuales en una vista kanban predeterminada.
 
 .. image:: expenses/products.png
    :align: center
    :alt: Set expense costs on products.
 
-To create a new expense product, click :guilabel:`Create`. A product form will appear. Only two
-fields are required, the :guilabel:`Product Name` and the :guilabel:`Unit of Measure`. Enter the
-:guilabel:`Product Name` in the field, and select the :guilabel:`Unit of Measure` from the drop-down
-menu (most products will be set to :guilabel:`Units`).
+Para crear un nuevo producto de gastos, haga clic en :guilabel:`Crear`. Aparecerá un formulario de producto. Solo se requieren dos campos, el :guilabel:`Nombre del producto` y la :guilabel:`Unidad de Medida`. Ingresa el
+:guilabel:`Nombre del Producto` en el campo correspondiente, y selecciona la :guilabel:`Unidad de Medida` en el menú desplegable (la mayoría de los productos serán configurados en :guilabel:`Unidades`).
 
 .. tip::
-   The *Sales* app is where specification on the units of measure are created and edited (e.g.
-   units, miles, nights, etc.). Go to :menuselection:`Sales app --> Configuration --> Settings` and
-   ensure `Units of Measure` is checked off in the `Product Catalog` section. Click on the
-   :guilabel:`Units of Measure` internal link to view, create, and edit the units of measure. Refer
-   to :doc:`this document </applications/inventory_and_mrp/inventory/management/products/uom>` to
-   learn more about units of measure and how to configure them.
+   El módulo de *Ventas* es donde se crean y editan las especificaciones sobre las unidades de medida (por ejemplo, unidades, 
+   millas, noches, etc.). Ir a :menuselection:`Módulo Ventas --> Configuración --> Configuración` y
+   asegúrese de que la opción `Unidad de Medidas` está marcada en la sección `Catálogo de productos`. Haga Click en el enlace
+   interno :guilabel:`Unidades de medida` para ver, crear, y editar las unidades de medida. Consulte
+   :doc:`este documento </applications/inventory_and_mrp/inventory/management/products/uom>` para
+   saber más sobre las unidades de medida y cómo configurarlas.
 
 .. image:: expenses/new-expense-product.png
    :align: center
    :alt: Set expense costs on products.
 
-The :guilabel:`Cost` field on the product form is populated with a value of `0.00` by default. When
-a specific expense should always be reimbursed for a particular price, enter that amount in the
-:guilabel:`Cost` field. Otherwise, leave the :guilabel:`Cost` set to `0.00`, and employees will
-report the actual cost when submitting an expense report.
+El campo :guilabel:`Cost` en el formulario de un producto está preconfigurado con un valor de `0.00` por defecto. 
+Cuando un gasto específico siempre debe ser reembolsado por un precio particular, ingrese esa cantidad en el campo
+:guilabel:`Costo`. De lo contrario, deje el campo :guilabel:`Costo` en `0.00`, y los empleados reportarán el costo 
+real al presentar un informe de gastos.
 
-.. example::
-   Here are some examples for when to set a specific :guilabel:`Cost` on a product vs. leaving the
-   :guilabel:`Cost` at `0.00`:
+.. Ejemplo::
+   Aquí hay algunos ejemplos de cuándo establecer un :guilabel:`Costo` specífico en un producto en lugar de dejar el
+   :guilabel:`Costo` en `0.00`:
 
-   - **Meals**: Set the :guilabel:`Cost` to `0.00`. When an employee logs an expense for a meal, they
-     enter the actual amount of the bill and will be reimbursed for that amount. An expense for a
-     meal costing $95.23 would equal a reimbursement for $95.23.
-   - **Mileage**: Set the :guilabel:`Cost` to `0.30`. When an employee logs an expense for
-     "mileage", they enter the number of miles driven, and are reimbursed 0.30 per mile they
-     entered. An expense for 100 miles would equal a reimbursement for $30.00.
-   - **Monthly Parking**: Set the :guilabel:`Cost` to `75.00`. When an employee logs an expense for
-     "monthly parking", the reimbursement would be for $75.00.
-   - **Expenses**: Set the :guilabel:`Cost` to `0.00`. When an employee logs an expense that is not
-     a meal, mileage, or monthly parking, they use the generic :guilabel:`Expenses` product. An
-     expense for a laptop costing $350.00 would be logged as an :guilabel:`Expenses` product, and
-     the reimbursement would be for $350.00.
+   - **Comidas**: Establezca el :guilabel:`Costo` en `0.00`. Cuando un empleado registra un gasto por una comida, 
+      ingresan la cantidad real de la factura y se les reembolsará por esa cantidad. Un gasto por una comida que 
+      cuesta $95.23 equivaldría a un reembolso por $95.23.
+   - **Millaje**: Establezca el :guilabel:`Costo` a `0.30`. Cuando un empleado registra un gasto por "millaje", 
+      ingresan la cantidad de millas conducidas y se les reembolsa $0.30 por cada milla registrada. Un gasto por 
+      100 millas equivaldría a un reembolso de $30.00.
+   - **Estacionamiento mensual**: Establezca el :guilabel:`Costo` a `75.00`. Cuando un empleado registra un gasto 
+      por "estacionamiento mensual", el reembolso sería de $75.00.
+   - **Gastos**: Establezca el :guilabel:`Costo` a `0.00`. Cuando un empleado registra un gasto que no es una comida, 
+      millaje o estacionamiento mensual, utilizan el producto genérico :guilabel:`Gastos`. Un gasto por una laptop que 
+      cuesta $350.00 se registraría como un producto :guilabel:`Gastos`, y el reembolso sería por $350.00.
 
-Select an :guilabel:`Expense Account` if using the Odoo *Accounting* app. It is recommended to check
-with the accounting department to determine the correct account to reference in this field as it
-will affect reports.
+Seleccione una :guilabel:`Cuenta de gastos` si está utilizando la aplicación *Contabilidad* de Odoo. Se recomienda verificar 
+con el departamento de contabilidad para determinar la cuenta correcta a la que se debe hacer referencia en este campo, 
+ya que afectará los informes.
 
-Set a tax on each product in the :guilabel:`Vendor Taxes` and :guilabel:`Customer Taxes` fields if
-applicable. It is considered good practice to use a tax that is configured with :ref:`Tax Included
-in Price <taxes/included-in-price>`. Taxes will be automatically configured if this is set.
+Establezca un impuesto en cada producto en los campos :guilabel:`Impuestos del Proveedor` e :guilabel:`Impuestos del Cliente`, 
+si corresponde. Se considera buena práctica utilizar un impuesto que esté configurado con :ref:`Impuesto incluido en el precio 
+<taxes/included-in-price>`. Los impuestos se configurarán automáticamente si se establece esta opción.
 
 .. _expenses/new:
 
-Record expenses
-===============
+Registrar gastos
+================
 
-Manually create a new expense
------------------------------
+Crear un nuevo gasto de forma manual
+------------------------------------
 
-To record a new expense, begin in the main :menuselection:`Expenses` app dashboard, which presents
-the default :guilabel:`My Expenses to Report` view. This view can also be accessed from
-:menuselection:`Expenses app --> My Expenses --> My Expenses to Report`.
+Para registrar un nuevo gasto, comience en el panel principal de la aplicación :menuselection:`Gastos`,
+que presenta la vista predeterminada :guilabel:`Mis Gastos a Reportar`. Esta vista también se puede acceder
+desde :menuselection:`Aplicación de Gastos --> Mis Gastos --> Mis Gastos a Reportar`.
 
-First, click :guilabel:`Create`, and then fill out the various fields on the form.
+En primer lugar, haga clic en :guilabel:`Crear`, y luego complete los distintos campos del formulario.
 
-- :guilabel:`Description`: Enter a short description for the expense in the :guilabel:`Description`
-  field. This should be short and informative, such as `lunch with client` or `hotel for
-  conference`.
-- :guilabel:`Product`: Select the product from the drop-down menu that most closely corresponds to
-  the expense. For example, an airplane ticket would be appropriate for an expense
-  :guilabel:`Product` named :guilabel:`Air Travel`.
-- :guilabel:`Unit Price`: Enter the total amount paid for the expense in one of two ways:
+- :guilabel:`Descripción`: Ingrese una breve descripción para el gasto en el campo :guilabel:`Descripción`.
+Esto debería ser breve e informativo, como almuerzo con el cliente o hotel para la conferencia.
+- :guilabel:`Producto`: Seleccione el producto del menú desplegable que se corresponda más estrechamente con 
+el gasto. Por ejemplo, un boleto de avión sería apropiado para un :guilabel:`Producto de gastos` llamado :guilabel:`Viaje en avión`.
+:guilabel:`Precio unitario`: Ingrese el monto total pagado por el gasto de una de dos maneras:
 
-  #. If the expense is for one single item/expense, enter the cost in the :guilabel:`Unit Price`
-     field, and leave the :guilabel:`Quantity` `1.00`.
-  #. If the expense is for multiples of the same item/expense, enter the price *per unit* in the
-     :guilabel:`Unit Price` field, and enter the *quantity of units* in the :guilabel:`Quantity`
-     field.
+   #. Si el gasto es para un solo artículo/gasto, ingrese el costo en el campo :guilabel:`Precio unitario`, y deje la 
+      :guilabel:`Cantidad` en `1.00`.
+   #. Si el gasto es para múltiples unidades del mismo artículo/gasto, ingrese el *precio por unidad* en el campo 
+      :guilabel:`Precio unitario`, e ingrese la *cantidad de unidades* en el campo :guilabel:`Cantidad`.
 
-     .. example::
-        In the case of a hotel stay, for example, the :guilabel:`Unit Price` would be set as the
-        cost *per night*, and set the :guilabel:`Quantity` to the *number of nights* stayed.
+     .. Ejemplo::
+        En el caso de una estadía en un hotel, por ejemplo, el :guilabel:`Precio unitario` se establecería como el 
+        costo *por noche*, y se establecería la :guilabel:`Cantidad` en el *número de noches* hospedadas.
 
-- :guilabel:`Taxes`: If taxes were paid on the expense, select the tax percentage using the
-  drop-down menu. Tax options are pre-configured based on the localization setting selected when the
-  database was created. Adding any new taxes should only be done when necessary.
+- :guilabel:`Impuestos`: Si se pagaron impuestos sobre el gasto, seleccione el porcentaje de impuestos utilizando 
+   el menú desplegable. Las opciones de impuestos están preconfiguradas en función de la configuración de localización
+   seleccionada al crear la base de datos. La adición de nuevos impuestos solo debe hacerse cuando sea necesario.
 
-  .. note::
-     When a tax is selected, the :guilabel:`Total` value will update in real time to show the added
-     taxes.
+  .. Nota::
+     Cuando un impuesto es seleccionado el valor :guilabel:`Total` será actualizado en tiempo real update in real time 
+     para mostrar los impuestos añadidos.
 
-- :guilabel:`Paid By`: Click the radio button to indicate who paid for the expense and should be
+- :guilabel:`Pagado por`: Click the radio button to indicate who paid for the expense and should be
   reimbursed. If the employee paid for the expense (and should be reimbursed) select
   :guilabel:`Employee (to reimburse)`. If the company paid directly instead (e.g. if the company
   credit card was used to pay for the expense) select :guilabel:`Company`.
